@@ -28,6 +28,7 @@ type LoyaltyApi
    (    Get '[JSON] Loyalty
    :<|> ReqBody '[JSON] LoyaltySettingRequest :> PutNoContent '[JSON] NoContent
    :<|> "rule" :> Capture "rule_id" LoyaltyRuleId :> ReqBody '[JSON] LoyaltyRuleRequest :> PutNoContent '[JSON] NoContent
+   :<|> "calculate" :> ReqBody '[JSON] Purchase :> Post '[JSON] CalculateResponse
    )
 
 api :: Proxy LoyaltyApi

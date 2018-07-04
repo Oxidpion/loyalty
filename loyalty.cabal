@@ -21,6 +21,7 @@ library
                      , LoyaltyServer
                      , Data.Loyalty
                      , Data.Api
+                     , Data.Purchase
   build-depends:       base >= 4.7 && < 5
                      , aeson
                      , monad-logger

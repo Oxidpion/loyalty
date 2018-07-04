@@ -46,7 +46,7 @@ data LoyaltyRuleCondition
 
 data LoyaltyRuleReward
   = PercentReward Float
-  | FixedReward Float
+  | FixedReward Integer
 
 $(deriveJSON defaultOptions {fieldLabelModifier = camelTo2 '_' . drop 7} ''Loyalty)
 $(deriveJSON defaultOptions {sumEncoding = defaultTaggedObject {tagFieldName = "type"}} ''LoyaltyRuleCondition)
